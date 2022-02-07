@@ -17,6 +17,6 @@ elif calculation == "mult":
     print(product)
 elif calculation == "div":
     quotient = number1 / number2
-    print(quotient)
+    print(int(quotient))
 else:
     print("Please enter valid calculation value")
