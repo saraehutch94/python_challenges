@@ -86,3 +86,21 @@ def bankTransactions():
     introPrompt()
 
 bankTransactions()
+
+# Exercise 4: Sort a String
+
+def alphabetizeString():
+
+    entered_string = input("Give me a string to alphabetize: ")
+
+    def sort_string():
+        sorted_string = sorted(entered_string)
+        joined_string = "".join(sorted_string)
+        print(f'Alphabetized: {joined_string}')
+
+    if (entered_string.isalpha()):
+        sort_string()
+    else:
+        print("* PLEASE ENTER ONLY LETTER CHARACTERS *")
+
+alphabetizeString()
