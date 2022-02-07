@@ -20,3 +20,16 @@ elif calculation == "div":
     print(int(quotient))
 else:
     print("Please enter valid calculation value")
+
+# Exercise 2: Reverse a string
+
+string = input("Enter a string: ")
+
+string_length = len(string)
+
+reversed_string = ""
+
+for letter in range(string_length - 1, -1, -1):
+    reversed_string += string[letter]
+
+print(reversed_string)
