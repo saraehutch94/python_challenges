@@ -33,3 +33,56 @@ for letter in range(string_length - 1, -1, -1):
     reversed_string += string[letter]
 
 print(reversed_string)
+
+# Exercise 3: Bank Transactions
+
+def bankTransactions():
+
+    global balance
+    balance = 5000
+
+    def display_balance():
+        print(f'Your current balance is {balance}')
+
+    def withdraw():
+        global balance
+        withdraw_amount = input("How much would you like to deposit?: ")
+        balance -= int(withdraw_amount)
+        display_balance()
+
+    def deposit():
+        global balance
+        deposit_amount = input("How much would you like to deposit?: ")
+        balance += int(deposit_amount)
+        display_balance()
+
+    def done():
+        done = input("Are you done?: ")
+        if done == "yes":
+            print("Thank you!")
+            return
+        # else: done == "no"
+        else:
+            return introPrompt()
+
+    def introPrompt():
+        display_balance()
+        user_choice = input("Which of these actions would you like to accomplish: display, withdraw, or deposit?: \n")
+
+        if user_choice == "display":
+            display_balance()
+            done()
+        elif user_choice == "withdraw":
+            withdraw()
+            done()
+        elif user_choice == "deposit":
+            deposit()
+            done()
+        # else: user_input is not one of the provided choices
+        else:
+            print("* PLEASE ENTER A VALID ACTION *")
+            introPrompt()
+    
+    introPrompt()
+
+bankTransactions()
