@@ -89,18 +89,23 @@ bankTransactions()
 
 # Exercise 4: Sort a String
 
+# *** REFACTOR INTO ONE FUNCTION LIKE ABOVE? (errors occurred when tried previously --> try again)
+    
 def alphabetizeString():
 
-    entered_string = input("Give me a string to alphabetize: ")
-
-    def sort_string():
-        sorted_string = sorted(entered_string)
+    def sort_string(string):
+        sorted_string = sorted(string)
         joined_string = "".join(sorted_string)
         print(f'Alphabetized: {joined_string}')
 
-    if (entered_string.isalpha()):
-        sort_string()
-    else:
-        print("* PLEASE ENTER ONLY LETTER CHARACTERS *")
+    def introInput():
+        entered_string = input("Give me a string to alphabetize: ")
+        if (entered_string.isalpha()):
+            sort_string(entered_string)
+        else:
+            print("* PLEASE ENTER ONLY LETTER CHARACTERS *")
+            introInput()
+    
+    introInput()
 
 alphabetizeString()
