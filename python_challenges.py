@@ -107,3 +107,18 @@ def alphabetizeString():
     introInput()
 
 alphabetizeString()
+
+# Exercise 5: Print Contacts
+
+contacts = {
+  'Brian': '333-333-3333',
+  'Lenny': '444-444-4444',
+  'Daniel': '777-777-7777'
+}
+
+def print_contacts(contacts):
+    
+    for name, number in contacts.items():
+        print(f'{name} has a phone number of {number}')
+
+print_contacts(contacts)
