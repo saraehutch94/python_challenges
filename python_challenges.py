@@ -88,8 +88,6 @@ def bankTransactions():
 bankTransactions()
 
 # Exercise 4: Sort a String
-
-# *** REFACTOR INTO ONE FUNCTION LIKE ABOVE? (errors occurred when tried previously --> try again)
     
 def alphabetizeString():
 
