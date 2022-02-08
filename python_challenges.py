@@ -71,17 +71,17 @@ def bankTransactions():
 
         if user_choice == "display":
             display_balance()
-            done()
+            return done()
         elif user_choice == "withdraw":
             withdraw()
-            done()
+            return done()
         elif user_choice == "deposit":
             deposit()
-            done()
+            return done()
         # else: user_input is not one of the provided choices
         else:
             print("* PLEASE ENTER A VALID ACTION *")
-            introPrompt()
+            return introPrompt()
     
     return introPrompt()
 
