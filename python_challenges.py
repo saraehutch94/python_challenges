@@ -42,19 +42,19 @@ def bankTransactions():
     balance = 5000
 
     def display_balance():
-        print(f'Your current balance is {balance}')
+        return print(f'Your current balance is {balance}')
 
     def withdraw():
         global balance
-        withdraw_amount = input("How much would you like to deposit?: ")
+        withdraw_amount = input("How much would you like to withdraw?: ")
         balance -= int(withdraw_amount)
-        display_balance()
+        return display_balance()
 
     def deposit():
         global balance
         deposit_amount = input("How much would you like to deposit?: ")
         balance += int(deposit_amount)
-        display_balance()
+        return display_balance()
 
     def done():
         done = input("Are you done?: ")
@@ -83,7 +83,7 @@ def bankTransactions():
             print("* PLEASE ENTER A VALID ACTION *")
             introPrompt()
     
-    introPrompt()
+    return introPrompt()
 
 bankTransactions()
 
@@ -94,17 +94,17 @@ def alphabetizeString():
     def sort_string(string):
         sorted_string = sorted(string)
         joined_string = "".join(sorted_string)
-        print(f'Alphabetized: {joined_string}')
+        return print(f'Alphabetized: {joined_string}')
 
     def introInput():
         entered_string = input("Give me a string to alphabetize: ")
         if (entered_string.isalpha()):
-            sort_string(entered_string)
+            return sort_string(entered_string)
         else:
             print("* PLEASE ENTER ONLY LETTER CHARACTERS *")
-            introInput()
+            return introInput()
     
-    introInput()
+    return introInput()
 
 alphabetizeString()
 
@@ -118,7 +118,9 @@ contacts = {
 
 def print_contacts(contacts):
     for name, number in contacts.items():
-        print(f'{name} has a phone number of {number}')
+        contact = print(f'{name} has a phone number of {number}')
+    
+    return contact
 
 print_contacts(contacts)
 
