@@ -121,3 +121,17 @@ def print_contacts(contacts):
         print(f'{name} has a phone number of {number}')
 
 print_contacts(contacts)
+
+# Exercise 6: Multiply by
+
+def multiply_by(list, number):
+
+    product_numbers = []
+
+    for item in list:
+       product = item * number
+       product_numbers.append(product)
+
+    return print(product_numbers)
+
+multiply_by([2, 4, 6], 5)
